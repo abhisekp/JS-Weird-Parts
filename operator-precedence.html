@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Operator Precedence &amp; Associativity Table - MDN</title>
+  <style>
+    html,
+    body {
+      font-family: 'Trebuchet MS';
+      color: #4d4e53;
+      line-height: 1.5;
+      font-size: 13px;
+    }
+
+    a,
+    abbr,
+    address,
+    article,
+    aside,
+    audio,
+    b,
+    blockquote,
+    body,
+    canvas,
+    caption,
+    cite,
+    code,
+    dd,
+    del,
+    details,
+    dfn,
+    div,
+    dl,
+    dt,
+    em,
+    fieldset,
+    figcaption,
+    figure,
+    footer,
+    form,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    header,
+    hgroup,
+    hr,
+    html,
+    i,
+    iframe,
+    img,
+    ins,
+    kbd,
+    label,
+    legend,
+    li,
+    mark,
+    menu,
+    nav,
+    object,
+    ol,
+    p,
+    pre,
+    q,
+    samp,
+    section,
+    small,
+    span,
+    strong,
+    sub,
+    summary,
+    sup,
+    table,
+    tbody,
+    td,
+    tfoot,
+    th,
+    thead,
+    time,
+    tr,
+    ul,
+    var,
+    video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+
+    h2 {
+      font-family: 'Open Sans', Arial, sans-serif;
+      line-height: 1;
+      word-wrap: break-word;
+    }
+
+    a {
+      color: #0095dd;
+      text-decoration: none;
+    }
+
+    table {
+      border-collapse: collapse !important;
+      width: 100%;
+      border: none;
+      padding: 2px;
+      margin: 0;
+    }
+
+    table th {
+      font-weight: bold;
+      text-align: left;
+    }
+
+    table td,
+    table th {
+      border: thin solid black !important;
+      padding: 1px 5px;
+      vertical-align: top;
+    }
+
+    table tbody {
+      border-spacing: 2px;
+      border-color: grey;
+    }
+
+    code {
+      font-style: inherit;
+      font-weight: inherit;
+      font-family: Consolas, "Liberation Mono", Courier, monospace;
+    }
+  </style>
+</head>
+
+<body>
+  <h2 style="float: none ! important;" id="Table">Operator Precedence &amp; Associativity Table</h2>
+
+  <p style="float: none ! important;">The following table is ordered from highest (19) to lowest (0) precedence.</p>
+
+  <table style="float: none ! important;" class="fullwidth-table">
+    <tbody>
+      <tr>
+        <th style="">Precedence</th>
+        <th style="">Operator type</th>
+        <th style="">Associativity</th>
+        <th>Individual operators</th>
+      </tr>
+      <tr>
+        <td style="">19</td>
+        <td style=""><a style="" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Grouping">Grouping</a>
+        </td>
+        <td>n/a</td>
+        <td><code>( … )</code>
+        </td>
+      </tr>
+      <tr>
+        <td style="" rowspan="3">18</td>
+        <td style=""><a style="" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Dot_notation">Member Access</a>
+        </td>
+        <td style="">left-to-right</td>
+        <td><code>… . …</code>
+        </td>
+      </tr>
+      <tr>
+        <td style=""><a style="" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Dot_notation">Computed Member Access</a>
+        </td>
+        <td style="">left-to-right</td>
+        <td style=""><code>… [ … ]</code>
+        </td>
+      </tr>
+      <tr>
+        <td style=""><a style="" href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Operators/Special/new" title="JavaScript/Reference/Operators/Special_Operators/new_Operator">new</a> (with argument list)</td>
+        <td style="">n/a</td>
+        <td style=""><code>new … ( … )</code>
+        </td>
+      </tr>
+      <tr>
+        <td style="" rowspan="2">17</td>
+        <td style=""><a style="" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions" title="JavaScript/Reference/Operators/Special_Operators/function_call">Function Call</a>
+        </td>
+        <td>left-to-right</td>
+        <td><code>… (&nbsp;<var>…&nbsp;</var>)</code>
+        </td>
+      </tr>
+      <tr>
+        <td style=""><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new" title="JavaScript/Reference/Operators/Special_Operators/new_Operator">new</a>&nbsp;(without argument list)</td>
+        <td>right-to-left</td>
+        <td><code>new …</code>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="2">16</td>
+        <td style=""><a style="" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment" title="JavaScript/Reference/Operators/Arithmetic_Operators">Postfix Increment</a>
+        </td>
+        <td>n/a</td>
+        <td><code>… ++</code>
+        </td>
+      </tr>
+      <tr>
+        <td style=""><a style="" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Decrement" title="JavaScript/Reference/Operators/Arithmetic_Operators">Postfix Decrement</a>
+        </td>
+        <td>n/a</td>
+        <td><code>… --</code>
+        </td>
+      </tr>
+      <tr>
+        <td style="" rowspan="9">15</td>
+        <td style=""><a style="" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT" title="JavaScript/Reference/Operators/Logical_Operators">Logical NOT</a>
+        </td>
+        <td>right-to-left</td>
+        <td><code>! …</code>
+        </td>
+      </tr>
+      <tr>
+        <td><a style="" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_NOT" title="JavaScript/Reference/Operators/Bitwise_Operators">Bitwise NOT</a>
+        </td>
+        <td>right-to-left</td>
+        <td><code>~ …</code>
+        </td>
+      </tr>
+      <tr>
+        <td style=""><a style="" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Unary_plus" title="JavaScript/Reference/Operators/Arithmetic_Operators">Unary Plus</a>
+        </td>
+        <td>right-to-left</td>
+        <td><code>+ …</code>
+        </td>
+      </tr>
+      <tr>
+        <td><a style="" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Unary_negation" title="JavaScript/Reference/Operators/Arithmetic_Operators">Unary Negation</a>
+        </td>
+        <td>right-to-left</td>
+        <td><code>- …</code>
+        </td>
+      </tr>
+      <tr>
+        <td style=""><a style="" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment" title="JavaScript/Reference/Operators/Arithmetic_Operators">Prefix Increment</a>
+        </td>
+        <td style="">right-to-left</td>
+        <td><code>++ …</code>
+        </td>
+      </tr>
+      <tr>
+        <td style=""><a style="" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Decrement" title="JavaScript/Reference/Operators/Arithmetic_Operators">Prefix Decrement</a>
+        </td>
+        <td style="">right-to-left</td>
+        <td><code>-- …</code>
+        </td>
+      </tr>
+      <tr>
+        <td style=""><a style="" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof" title="JavaScript/Reference/Operators/Special_Operators/typeof_Operator">typeof</a>
+        </td>
+        <td style="">right-to-left</td>
+        <td><code>typeof …</code>
+        </td>
+      </tr>
+      <tr>
+        <td style=""><a style="" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void" title="JavaScript/Reference/Operators/Special_Operators/void_Operator">void</a>
+        </td>
+        <td>right-to-left</td>
+        <td><code>void …</code>
+        </td>
+      </tr>
+      <tr>
+        <td style=""><a style="" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete" title="JavaScript/Reference/Operators/Special_Operators/delete_Operator">delete</a>
+        </td>
+        <td>right-to-left</td>
+        <td><code>delete …</code>
+        </td>
+      </tr>
+      <tr>
+        <td style="" rowspan="3">14</td>
+        <td style=""><a style="" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Multiplication" title="JavaScript/Reference/Operators/Arithmetic_Operators">Multiplication</a>
+        </td>
+        <td>left-to-right</td>
+        <td><code>… *&nbsp;…</code>
+        </td>
+      </tr>
+      <tr>
+        <td style=""><a style="" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Division" title="JavaScript/Reference/Operators/Arithmetic_Operators">Division</a>
+        </td>
+        <td>left-to-right</td>
+        <td><code>… /&nbsp;…</code>
+        </td>
+      </tr>
+      <tr>
+        <td style=""><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder" title="JavaScript/Reference/Operators/Arithmetic_Operators">Remainder</a>
+        </td>
+        <td>left-to-right</td>
+        <td><code>… %&nbsp;…</code>
+        </td>
+      </tr>
+      <tr>
+        <td style="cursor: default;" rowspan="2">13</td>
+        <td style=""><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition" title="JavaScript/Reference/Operators/Arithmetic_Operators">Addition</a>
+        </td>
+        <td>left-to-right</td>
+        <td><code>… +&nbsp;…</code>
+        </td>
+      </tr>
+      <tr>
+        <td style=""><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Subtraction" title="JavaScript/Reference/Operators/Arithmetic_Operators">Subtraction</a>
+        </td>
+        <td>left-to-right</td>
+        <td><code>… -&nbsp;…</code>
+        </td>
+      </tr>
+      <tr>
+        <td style="" rowspan="3">12</td>
+        <td><a style="" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators" title="JavaScript/Reference/Operators/Bitwise_Operators">Bitwise Left Shift</a>
+        </td>
+        <td>left-to-right</td>
+        <td><code>… &lt;&lt;&nbsp;…</code>
+        </td>
+      </tr>
+      <tr>
+        <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators" title="JavaScript/Reference/Operators/Bitwise_Operators">Bitwise Right Shift</a>
+        </td>
+        <td>left-to-right</td>
+        <td><code>… &gt;&gt;&nbsp;…</code>
+        </td>
+      </tr>
+      <tr>
+        <td style=""><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators" title="JavaScript/Reference/Operators/Bitwise_Operators">Bitwise Unsigned Right Shift</a>
+        </td>
+        <td>left-to-right</td>
+        <td><code>… &gt;&gt;&gt;&nbsp;…</code>
+        </td>
+      </tr>
+      <tr>
+        <td style="" rowspan="6">11</td>
+        <td style=""><a style="" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Less_than_operator" title="JavaScript/Reference/Operators/Comparison_Operators">Less Than</a>
+        </td>
+        <td style="">left-to-right</td>
+        <td><code>… &lt;&nbsp;…</code>
+        </td>
+      </tr>
+      <tr>
+        <td style=""><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Less_than__or_equal_operator" title="JavaScript/Reference/Operators/Comparison_Operators">Less Than Or Equal</a>
+        </td>
+        <td style="">left-to-right</td>
+        <td><code>… &lt;=&nbsp;…</code>
+        </td>
+      </tr>
+      <tr>
+        <td style=""><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Greater_than_operator" title="JavaScript/Reference/Operators/Comparison_Operators">Greater Than</a>
+        </td>
+        <td>left-to-right</td>
+        <td><code>… &gt;&nbsp;…</code>
+        </td>
+      </tr>
+      <tr>
+        <td style=""><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Greater_than_or_equal_operator" title="JavaScript/Reference/Operators/Comparison_Operators">Greater Than Or Equal</a>
+        </td>
+        <td style="">left-to-right</td>
+        <td><code>… &gt;=&nbsp;…</code>
+        </td>
+      </tr>
+      <tr>
+        <td style=""><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in" title="JavaScript/Reference/Operators/Special_Operators/in_Operator">in</a>
+        </td>
+        <td style="">left-to-right</td>
+        <td><code>… in&nbsp;…</code>
+        </td>
+      </tr>
+      <tr>
+        <td style=""><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof" title="JavaScript/Reference/Operators/Special_Operators/instanceof_Operator">instanceof</a>
+        </td>
+        <td style="">left-to-right</td>
+        <td><code>… instanceof&nbsp;…</code>
+        </td>
+      </tr>
+      <tr>
+        <td style="" rowspan="4">10</td>
+        <td style=""><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality" title="JavaScript/Reference/Operators/Comparison_Operators">Equality</a>
+        </td>
+        <td style="">left-to-right</td>
+        <td><code>… ==&nbsp;…</code>
+        </td>
+      </tr>
+      <tr>
+        <td style=""><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Inequality" title="JavaScript/Reference/Operators/Comparison_Operators">Inequality</a>
+        </td>
+        <td>left-to-right</td>
+        <td><code>… !=&nbsp;…</code>
+        </td>
+      </tr>
+      <tr>
+        <td style=""><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity" title="JavaScript/Reference/Operators/Comparison_Operators">Strict Equality</a>
+        </td>
+        <td>left-to-right</td>
+        <td><code>… ===&nbsp;…</code>
+        </td>
+      </tr>
+      <tr>
+        <td style=""><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Nonidentity" title="JavaScript/Reference/Operators/Comparison_Operators">Strict Inequality</a>
+        </td>
+        <td>left-to-right</td>
+        <td><code>… !==&nbsp;…</code>
+        </td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td style=""><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_AND" title="JavaScript/Reference/Operators/Bitwise_Operators">Bitwise AND</a>
+        </td>
+        <td>left-to-right</td>
+        <td><code>… &amp;&nbsp;…</code>
+        </td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td style=""><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_XOR" title="JavaScript/Reference/Operators/Bitwise_Operators">Bitwise XOR</a>
+        </td>
+        <td style="">left-to-right</td>
+        <td><code>… ^&nbsp;…</code>
+        </td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_OR" title="JavaScript/Reference/Operators/Bitwise_Operators">Bitwise OR</a>
+        </td>
+        <td style="">left-to-right</td>
+        <td><code>… |&nbsp;…</code>
+        </td>
+      </tr>
+      <tr>
+        <td style="">6</td>
+        <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND" title="JavaScript/Reference/Operators/Logical_Operators">Logical AND</a>
+        </td>
+        <td style="">left-to-right</td>
+        <td><code>… &amp;&amp;&nbsp;…</code>
+        </td>
+      </tr>
+      <tr>
+        <td style="">5</td>
+        <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR" title="JavaScript/Reference/Operators/Logical_Operators">Logical OR</a>
+        </td>
+        <td style="">left-to-right</td>
+        <td><code>… ||&nbsp;…</code>
+        </td>
+      </tr>
+      <tr>
+        <td style="">4</td>
+        <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator" title="JavaScript/Reference/Operators/Special_Operators/Conditional_Operator">Conditional</a>
+        </td>
+        <td style="">right-to-left</td>
+        <td><code>… ? … : …</code>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="12">3</td>
+        <td rowspan="12"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators" title="JavaScript/Reference/Operators/Assignment_Operators">Assignment</a>
+        </td>
+        <td rowspan="12">right-to-left</td>
+        <td><code>… =&nbsp;…</code>
+        </td>
+      </tr>
+      <tr>
+        <td><code>… +=&nbsp;…</code>
+        </td>
+      </tr>
+      <tr>
+        <td><code>… -=&nbsp;…</code>
+        </td>
+      </tr>
+      <tr>
+        <td><code>… *=&nbsp;…</code>
+        </td>
+      </tr>
+      <tr>
+        <td><code>… /=&nbsp;…</code>
+        </td>
+      </tr>
+      <tr>
+        <td><code>… %=&nbsp;…</code>
+        </td>
+      </tr>
+      <tr>
+        <td><code>… &lt;&lt;=&nbsp;…</code>
+        </td>
+      </tr>
+      <tr>
+        <td><code>… &gt;&gt;=&nbsp;…</code>
+        </td>
+      </tr>
+      <tr>
+        <td><code>… &gt;&gt;&gt;=&nbsp;…</code>
+        </td>
+      </tr>
+      <tr>
+        <td><code>… &amp;=&nbsp;…</code>
+        </td>
+      </tr>
+      <tr>
+        <td><code>… ^=&nbsp;…</code>
+        </td>
+      </tr>
+      <tr>
+        <td><code>… |=&nbsp;…</code>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield" title="JavaScript/Reference/Operators/yield">yield</a>
+        </td>
+        <td>right-to-left</td>
+        <td><code>yield&nbsp;…</code>
+        </td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator" title="JavaScript/Reference/Operators/Spread_operator">Spread</a>
+        </td>
+        <td>n/a</td>
+        <td><code>...</code>&nbsp;…</td>
+      </tr>
+      <tr>
+        <td>0</td>
+        <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator" title="JavaScript/Reference/Operators/Comma_Operator">Comma / Sequence</a>
+        </td>
+        <td>left-to-right</td>
+        <td><code>… ,&nbsp;…</code>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>
