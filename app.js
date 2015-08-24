@@ -23,16 +23,3 @@ document.addEventListener('click', clickHandler);
 waitThreeSeconds();
 
 console.log('finished running the program');
-
-
-// run("", false)
-function run(a, x) {
-    console.log("Result Type: " + typeof (a || x == a) + ", Result: " + (execute(a) || execute(x) == execute(a)));
-    console.log("Result Type: " + typeof (a || (x == a)) + ", Result: " + (execute(a) || (execute(x) == execute(a))));
-    console.log("Result Type: " + typeof ((a || x) == a) + ", Result: " + ((execute(a) || execute(x)) == execute(a)));
-}
-
-function execute(a) {
-  console.log(a + ' executed');
-  return a;
-}
