@@ -1,11 +1,15 @@
-var person = {
-    firstName: 'Abhisek',
-    lastName: 'Pattnaik',
-    address: {
-        city: 'Bhubaneswar',
-        state: 'Odisha',
-        country: 'India'
+var english = {
+    greetings: {
+        basic: 'Hello!',
+        cool: 'Hi!'
     }
 };
 
-console.log(person);
+var spanish = {
+    greetings: {
+        basic: 'Hola!'
+    }
+};
+
+console.log(english);
+console.log(spanish);
