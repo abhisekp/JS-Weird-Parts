@@ -1,10 +1,8 @@
-var objLiteral = {
-    name: 'Abhisek',
-    isProgrammer: true
-};
+function greet() {
+    console.log('Hello!');
+}
 
-var jsonObj = JSON.stringify(objLiteral);
-console.log(jsonObj);
+greet.language = 'english';
 
-var jsObj = JSON.parse(jsonObj);
-console.log(jsObj);
+console.log(greet);
+console.log(greet.language);
