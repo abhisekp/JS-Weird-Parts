@@ -1,16 +1,12 @@
-function greet() {
-    console.log('Hello!');
+var a = { greeting: 'Hello' },
+    b = a;
+
+function changeGreeting(obj) {
+    obj.greeting = 'Hi!';
 }
 
-greet.language = 'english';
+changeGreeting(b);
 
-console.log(greet);
-console.log(greet.language);
+console.log(a);
+console.log(b);
 
-function log(a) {
-    a();
-}
-
-log(function () {
-    console.log('Hello!');
-});
