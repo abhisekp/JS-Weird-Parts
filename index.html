@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-  <script src="app.js"></script>
+    <meta charset="UTF-8">
+    <title>Document</title>
 </head>
+
 <body>
-
+<!--    <script src="//google.github.io/traceur-compiler/bin/traceur.js"></script>-->
+    <script>
+        if (typeof traceur !== 'undefined') {
+            document.write(
+                '<script src="//google.github.io/traceur-compiler/src/bootstrap.js"><\/script>'
+            );
+        }
+        else {
+            document.write('<script src="traceur.js"><\/script>');
+            document.write('<script src="bootstrap.js"><\/script>');
+        }
+    </script>
+    <script src="app.js" type="module"></script>
 </body>
-</html>
 
+</html>
