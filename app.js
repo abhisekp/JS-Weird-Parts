@@ -1,12 +1,25 @@
-var a = { greeting: 'Hello' },
-    b = a;
+var  z = {
+    zName: 'Tommy Hilfrangler',
+    zLog: function () {
+        var self = this;
 
-function changeGreeting(obj) {
-    obj.greeting = 'Hi!';
-}
+        console.log(self);
 
-changeGreeting(b);
+        function changeName(name) {
+            self.zName = name;
+        }
 
-console.log(a);
-console.log(b);
+        changeName('Murfy Mustaffa');
+        console.log(self);
+    }
+};
 
+console.log(z);
+
+ z.zLog();
+
+var logger =  z.zLog;
+
+logger();
+
+console.log(self);
